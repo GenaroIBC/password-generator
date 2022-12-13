@@ -12,5 +12,61 @@
   </head>
   <body>
     <h1>Password Generator</h1>
+    <h2>Create a secure, customized, random password</h2>
+
+    <form id="password-form">
+      <h3>
+        <label for="pass-length">Length</label>
+      </h3>
+      <div class="input-group">
+        <input
+          min="8"
+          max="30"
+          type="range"
+          name="pass-length"
+          id="pass-length"
+        />
+      </div>
+
+      <h3>Composition</h3>
+      <div class="input-group">
+        <div class="input-group__option">
+          <label for="has-numbers">numbers</label>
+          <input type="checkbox" name="has-numbers" id="has-numbers" />
+        </div>
+
+        <div class="input-group__option">
+          <label for="has-symbold">symbols</label>
+          <input type="checkbox" name="has-symbold" id="has-symbold" />
+        </div>
+      </div>
+
+      <h3>Case</h3>
+      <div class="input-group">
+        <div class="input-group__option">
+          <label for="uppercase">UpperCase</label>
+          <input value="uppercase" type="radio" name="case" id="uppercase" />
+        </div>
+
+        <div class="input-group__option">
+          <label for="lowercase">LowerCase</label>
+          <input value="lowercase" type="radio" name="case" id="lowercase" />
+        </div>
+
+        <div class="input-group__option">
+          <label for="mixedcase">Mixed</label>
+          <input
+            checked
+            value="mixedcase"
+            type="radio"
+            name="case"
+            id="mixedcase"
+          />
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
   </body>
 </html>
