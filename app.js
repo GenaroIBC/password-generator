@@ -1,5 +1,7 @@
 import { generatePassword } from "./generatePassword.js";
 
+const $passwordPlace = document.getElementById("password-place");
+
 document.addEventListener("submit", e => {
   e.preventDefault();
   const passwordForm = document.getElementById("password-form");
@@ -22,9 +24,5 @@ document.addEventListener("submit", e => {
     wordCase
   });
 
-  const $passwordSpan = document.createElement("span");
-
-  $passwordSpan.textContent = password;
-
-  document.body.appendChild($passwordSpan);
+  $passwordPlace.textContent = password;
 });

@@ -78,3 +78,12 @@ button[type="reset"] {
   background-color: #111;
   color: #fff;
 }
+
+#password-place {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+
+  border-radius: 5px;
+
+  background-color: slategray;
+}
