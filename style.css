@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --complement-color: #409;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -85,5 +89,28 @@ button[type="reset"] {
 
   border-radius: 5px;
 
-  background-color: slategray;
+  background-color: var(--complement-color);
+}
+
+#pass-length {
+  position: relative;
+  accent-color: var(--complement-color);
+}
+
+#pass-length::after,
+#pass-length::before {
+  position: absolute;
+
+  font-size: 1.6rem;
+  top: -50%;
+}
+
+#pass-length::before {
+  left: -30px;
+  content: "-";
+}
+
+#pass-length::after {
+  content: "+";
+  right: -30px;
 }
