@@ -6,6 +6,7 @@
 
 :root {
   --complement-color: #409;
+  --complement-color-lighter: #60e;
 }
 
 body {
@@ -26,6 +27,10 @@ body {
   font-family: "Cascadia Code";
 
   text-align: center;
+}
+
+img {
+  max-width: 100%;
 }
 
 h1 {
@@ -83,15 +88,6 @@ button[type="reset"] {
   color: #fff;
 }
 
-#password-place {
-  padding: 0.8rem 1.5rem;
-  font-size: 1.2rem;
-
-  border-radius: 5px;
-
-  background-color: var(--complement-color);
-}
-
 #pass-length {
   position: relative;
   accent-color: var(--complement-color);
@@ -113,4 +109,36 @@ button[type="reset"] {
 #pass-length::after {
   content: "+";
   right: -30px;
+}
+
+#password-section {
+  display: flex;
+  gap: 1rem;
+
+  padding: 1rem;
+
+  background-color: var(--complement-color);
+  border-radius: 5px;
+}
+
+#password-section:active {
+  outline: 5px solid var(--complement-color);
+  background-color: var(--complement-color-lighter);
+}
+
+#password-section:active > * {
+  filter: invert(1);
+}
+
+#password-section img {
+  width: 20px;
+
+  margin: 0;
+  padding: 0;
+}
+
+#password-section p {
+  margin: 0;
+
+  font-size: 1.2rem;
 }
