@@ -1,8 +1,8 @@
 # Password Generator
 
-## 🗒️ Description
+## 🗒️ Features
 
-In this generator, you can customize the parameters to get a custom output.
+In this password generator, you can customize the parameters to get a custom output.
 
 The fields you can customize are:
 
@@ -20,10 +20,10 @@ All these options result in a large variety of combinations.
 
 ## 🔗 Try It
 
-Try it [here]()
+Try it [here](https://pass-generator-2022.netlify.app/)
 
 ## 🚀 Stack
 
 HTML, CSS and JavaScript native.
 
-Deploy: [Vercel](https://vercel.com)
+Deploy: [Netlify](https://netlify.app/)
