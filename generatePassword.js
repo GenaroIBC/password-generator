@@ -1,33 +1,8 @@
 const randomNum = (min, max) => Math.round(Math.random() * (max - min) + min);
 
-const WORDS = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z"
-];
+const WORDS = [...Array(26).keys()].map(index =>
+  String.fromCharCode(index + 97)
+);
 
 const SYMBOLS = [
   "!",
