@@ -1,11 +1,16 @@
 import { generatePassword } from "./generatePassword.js";
 
-const $passwordPlace = document.getElementById("password-place");
+const $passwordSection = document.getElementById("password-section");
+const $passwordField = document.getElementById("password-field");
+
+$passwordSection.addEventListener("click", () => {
+  navigator.clipboard.writeText($passwordField.textContent);
+});
 
 document.addEventListener("submit", e => {
   e.preventDefault();
-  const passwordForm = document.getElementById("password-form");
-  const formEntries = new FormData(passwordForm).entries();
+  const $passwordForm = document.getElementById("password-form");
+  const formEntries = new FormData($passwordForm).entries();
 
   const {
     "pass-length": length,
@@ -24,5 +29,5 @@ document.addEventListener("submit", e => {
     wordCase
   });
 
-  $passwordPlace.textContent = password;
+  $passwordField.textContent = password;
 });
